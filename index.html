@@ -1,10 +1,221 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
-        <meta charset="UTF=8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="style.css">
-        <title> Hello world</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link rel="shortcut icone" href="assets/shortcute icone.png" />
+        <link rel="stylesheet" href="navbar.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
     </head>
+
+    <body>
+        <header class="header-container">
+            <div class="me">
+                <a>
+                    <em> <strong> Nicolas Somnier </strong> </em>
+                </a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="burger">≡</label>
+            <div class="navbar">
+                <a href="#accueil">Accueil</a>
+                <a href="#about">Qui suis-je</a>
+                <a href="#projets">Projets</a>
+                <a href="#contacts">Contacts</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="accueil" id="accueil">
+                <div class="container-principale">
+                    <div class="tittle-main">
+                        <div class="ligne-avec-rond">
+                            <em><strong> Bonjour </strong></em>
+                            <div class="rond"></div>
+                        </div>
+                        <p class="aaaaa">
+                            <span class="ligne-horizontale"></span>
+                            <span class="texte-ligne"
+                                >Je m'appelle Nicolas Somnier</span
+                            >
+                        </p>
+                        <em class="bb"
+                            ><strong> Développeur Freelance </strong></em
+                        >
+                    </div>
+                    <div class="fleches-container">
+                        <span class="fleche gauche"><</span>
+                        <div class="rond-lumineux">
+                            <img
+                                class="profil"
+                                src="./assets/profil.png"
+                                alt="Photo de profil"
+                            /><br />
+                        </div>
+                        <span class="fleche droite">></span>
+                    </div>
+                </div>
+                <a
+                    class="got-projet"
+                    href="https://www.youtube.com/?app=desktop&hl=FR"
+                >
+                    Desirez-vous un projet ?</a
+                >
+                <a class="my-resume" href="#about"> A propos de moi</a>
+
+                <a>
+                    Bash Linux&nbsp;&nbsp;&nbsp;&nbsp;
+                    C/C++&nbsp;&nbsp;&nbsp;&nbsp; Python&nbsp;&nbsp;&nbsp;&nbsp;
+                    Java&nbsp;&nbsp;&nbsp;&nbsp; HMTL&nbsp;&nbsp;&nbsp;&nbsp;
+                    CSS&nbsp;&nbsp;&nbsp;&nbsp;
+                    Javascript&nbsp;&nbsp;&nbsp;&nbsp;
+                    Node/React.js&nbsp;&nbsp;&nbsp;&nbsp;
+                    Github&nbsp;&nbsp;&nbsp;&nbsp;
+                    Docker&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+            </section>
+            <section class="about" id="about">
+                <h2 class="info">
+                    <ul class="info-list">
+                        <li>
+                            <img
+                                src="./assets/icone1.png"
+                                alt=""
+                                class="icon"
+                            />
+                            Deploiement d'un Site Web
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/icone2.png"
+                                alt=""
+                                class="icon"
+                            />
+                            Developpement d'Application Web
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/icone3.png"
+                                alt=""
+                                class="icon"
+                            />
+                            Hébergement d'un Site Web
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/icone4.png"
+                                alt=""
+                                class="icon"
+                            />
+                            Developpement de Logiciel
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/icone5.png"
+                                alt=""
+                                class="icon"
+                            />
+                            Création de Jeu Vidéo
+                        </li>
+                    </ul>
+                </h2>
+                <dev>
+                    <h1 class="tittle-about">A propos de moi</h1>
+                    <p>
+                        <strong>
+                            Développeur informatique – Étudiant en 3ᵉ année à
+                            Epitech
+                        </strong>
+                        <br />
+                        Cela fait maintenant 3 ans que j'étudie à Epitech, où
+                        j'ai acquis de solides bases en programmation et en
+                        résolution de problèmes concrets. Au fil de mon
+                        parcours, j'ai mené à bien de nombreux projets
+                        personnels et professionnels, qui m'ont confronté à des
+                        défis techniques variés. Grâce à une approche autonome,
+                        structurée et persévérante, j’ai su les relever avec
+                        efficacité.
+                        <br />
+                        Aujourd’hui, je me lance en tant que développeur
+                        freelance et propose mes services aux entreprises,
+                        particuliers ou associations ayant des besoins en
+                        développement web ou logiciel. Passionné par le code et
+                        les technologies, je suis motivé à mettre mes
+                        compétences au service de projets concrets et utiles.
+                    </p>
+                    <p>
+                        <strong
+                            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50
+                            +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            3 +</strong
+                        >
+                        <br />
+                        Projets
+                        réalisés&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;années
+                        d'expériences
+                    </p>
+                </dev>
+            </section>
+            <section class="projets" id="projets">
+                <h1 class="projet-tittle">Projets</h1>
+            </section>
+            <section class="contacts" id="contacts">
+                <h1 class="tittle-contact">Contacts</h1>
+                <h2 class="proposition">
+                    💬 Un projet en tête ? <br />
+                    Parlons-en ensemble et donnons-lui vie.
+                </h2>
+                <form
+                    class="forms-contact"
+                    action="https://formsubmit.co/nicolas.somnier@epitech.eu"
+                    method="POST"
+                >
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Votre Nom"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Votre Email"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        placeholder="Message"
+                        required
+                    ></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <h1 class="me">
+                <em> <strong> Nicolas Somnier </strong> </em>
+            </h1>
+            <p class="end">
+                Hâte de collaborer avec vous sur de beaux projets. À très
+                bientôt !
+            </p>
+            <a href="https://github.com/Nicolassmn">
+                <img class="github-img" src="assets/github.png" alt="github" />
+            </a>
+            <a href="https://www.linkedin.com/in/nicolas-somnier-1275a52a3/">
+                <img
+                    class="linkedin-img"
+                    src="assets/linkedin.png"
+                    alt="linkedin"
+                />
+            </a>
+        </footer>
+    </body>
 </html>
