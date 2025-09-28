@@ -10,6 +10,7 @@ body {
 }
 
 section{
+    margin-top: 10%;
     height: 79vh;
 }
 
@@ -27,7 +28,7 @@ section{
 }
 
 .header h1 {
-    font-size: 30px;
+    font-size: 2.2vw;
     margin-left: 20px;
     padding-left: 20px;
 }
@@ -62,7 +63,7 @@ nav a{
     display: inline-block;
     text-decoration: none;
     padding: 20px;
-    font-size: 30px;
+    font-size: 1.5vw;
     color: whitesmoke;
     text-transform: capitalize;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3 ease;
@@ -105,7 +106,7 @@ nav a:hover::after{
     }
 
     #menu-icon-id{
-        font-size: 50px;
+        font-size: 7vw;
         border-radius: 50%;
         color: whitesmoke;
         border: 2px solid transparent;
@@ -147,14 +148,12 @@ nav a:hover::after{
         display: block;
         width: 100%;
         padding: 15px 10px;
-        font-size: 20px;
+        font-size: 2.8vw;
     }
 }
 /* ---------------------------HEADER------------------------------------------*/
 
 #Home {
-    margin-top: 150px;
-    margin-bottom: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -180,17 +179,20 @@ nav a:hover::after{
 
 .presentation h2:first-child, .presentation h1 {
     margin: 10px 0;
-    font-size: 50px;
     font-weight: 900;
     position: relative;
-    left: 110px;
+    left: 10%;
+}
+
+.presentation h2:first-child {
+    font-size: 5vw;
 }
 
 .presentation h2:first-child::after{
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 1.5vw;
+    height: 1.5vw;
     border-radius: 50%;
     margin-left: 15px;
     background-color: rgba(239, 107, 88, 255);
@@ -204,7 +206,7 @@ nav a:hover::after{
 
 .presentation h2:last-of-type {
     margin: 10px 0;
-    font-size: 50px;
+    font-size: 2.8vw;
     padding-right: 30%;
     display: flex;
     justify-content: flex-end;
@@ -236,7 +238,7 @@ nav a:hover::after{
 }
 
 .presentation .button button {
-    font-size: 30px;
+    font-size: 1.5vw;
     background-color: transparent;
     color: whitesmoke;
     padding: 20px;
@@ -264,7 +266,7 @@ nav a:hover::after{
 }
 
 .presentation h1{
-    font-size: 50px;
+    font-size: 2.8vw;
 }
 
 #Home .side-right {
@@ -309,12 +311,6 @@ nav a:hover::after{
     z-index: 2;
 }
 
-@media (max-width: 2100) {
-    
-}
-
-/* ---------------------------HOME------------------------------------------*/
-
 .banner {
     font-family: "Rubik Glitch", system-ui;
     font-weight: 400;
@@ -324,7 +320,7 @@ nav a:hover::after{
     white-space: nowrap;
     border-top: 4px solid rgb(2,14,63);
     border-bottom: 4px solid rgb(2,14,63);
-    height: 150px;
+    height: 17%;
     display: flex;
     z-index: 1000;
     align-items: center;
@@ -339,9 +335,9 @@ nav a:hover::after{
 }
 
 .banner-content span {
-    font-size: 30px;
+    font-size: 2.2vw;
     color: antiquewhite;
-    text-shadow: 
+    text-shadow:
     0 0 5px rgba(0,255,255,0.5),
     0 0 10px rgba(0,255,255,0.3),
     0 0 20px rgba(0,255,255,0.2),
@@ -366,5 +362,62 @@ nav a:hover::after{
 }
 
 
-/* ---------------------------BANNER------------------------------------------*/
+@media (max-width: 768px) {
+    #Home .content {
+        flex-direction: column;
+    }
+    .presentation {
+        padding-top: 2%;
+        height: 40%;
+        width: 100%;
+        border: 2px solid blanchedalmond;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .presentation h2, .presentation h1 {
+        left: 0%;
+    }
+    .presentation h2:last-of-type {
+        position: relative;
+        padding: 0;
+    }
+    .presentation h2:last-of-type::before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        background-color: rgba(239, 107, 88, 255);
+        box-shadow: 
+            0 0 20px rgba(239, 107, 88, 0.8),
+            0 0 40px rgba(239, 107, 88, 0.6),
+            0 0 60px rgba(239, 107, 88, 0.4),
+            0 0 80px rgba(239, 107, 88, 0.2);
+        filter: blur(2px);
+    }
+    .presentation h2:first-child {
+        padding-right: 15%;
+    }
+    .presentation .button {
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .presentation .button button {
+        display: inline-block;
+        padding: 10px;
+    }
+    #Home .side-right {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    .banner {
+        height: 8%;
+    }
+}
+
+/* ---------------------------HOME------------------------------------------*/
 
