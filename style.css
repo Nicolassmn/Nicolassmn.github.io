@@ -424,9 +424,6 @@ nav a:hover::after{
 }
 
 @media (max-width: 900px) {
-    #Home {
-        height: 62vh;
-    }
     .presentation h1 {
         font-size: 4vw;
     }
