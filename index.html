@@ -13,102 +13,102 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     </header>
     <body>
-        <div class="header">
+        <header class="header">
             <button class="menu"><i class='bx bx-menu' id="menu-icon-id"></i></button>
             <h1>Nicolas Somnier</h1>
             <nav>
                 <ul class="nav-menu" id="navBar">
                     <li><a href="#Home">Accueil</a></li>
-                    <li><a href="#About">À propos de moi</a></li>
+                    <li><a href="#About-Me">À propos de moi</a></li>
                     <li><a href="#Projects">Projets</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-        <script src="script.js"></script>
-
-        <section id="Home">
-            <div class="content">
-                <div class="presentation">
-                    <h2>Bonjour</h2>
-                    <h2>Je suis Nicolas</h2>
-                    <h1>Un Développer Informatique</h1>
-                    <div class="button">
-                        <button class="contact-button">Envie d'un projet ?</button>
-                        <button class="About-button">A propos de moi</button>
+        </header>
+        <main class="main-content">
+            <section id="Home">
+                <div class="content">
+                    <div class="presentation">
+                        <h1>Bonjour</h1>
+                        <h3>Je suis Nicolas</h3>
+                        <h2>Un Développer Informatique</h2>
+                        <div class="button">
+                            <button onclick="location.href='#Contact'">Envie d'un projet ?</button>
+                            <button id="cv"> Mon CV</button>
+                        </div>
+                        <div id="cv-overlay">
+                            <div class="cv-container">
+                                <iframe src="assets/CV pro.pdf" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-right">
+                        <img class="profil" src="assets/profil.png" alt="Photo de profil de Nicolas Somnier">
                     </div>
                 </div>
+                <div class="banner">
+                    <div class="banner-content">
+                        <span>C/C++</span>
+                        <span>Python</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Sequelize</span>
+                        <span>MySQL</span>
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                        <span>Bash Linus</span>
+                        <span>C/C++</span>
+                        <span>Python</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Sequelize</span>
+                        <span>MySQL</span>
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </section>
+            <section id="About-Me">
                 <div class="side-right">
-                    <img class="profil" src="assets/profil.png" alt="Image de profil">
+                    <img class="website-img" src="assets/icone6.png" alt="Website Development">
+                    <img class="app-img" src="assets/icone2.png" alt="Application Development">
+                    <img class="hosting-img" src="assets/icone3.png" alt="Website Hosting">
+                    <img class="game-img" src="assets/icone5.png" alt="Video game Development">
                 </div>
-            </div>
-            <div class="banner">
-                <div class="banner-content">
-                    <span>C/C++</span>
-                    <span>Python</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Sequelize</span>
-                    <span>MySQL</span>
-                    <span>GitHub</span>
-                    <span>Docker</span>
-                    <span>Bash Linus</span>
-                    <span>C/C++</span>
-                    <span>Python</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Sequelize</span>
-                    <span>MySQL</span>
-                    <span>GitHub</span>
-                    <span>Docker</span>
+                <div class="side-left">
+                    <h1>A propos de moi</h1>
+                    <p>Paragraphe de présentation</p>
+                    <h2>50 +</h2>
+                    <h2>2 +</h2>
                 </div>
-            </div>
-        </section>
-        
-        <section id="About">
-            <div class="side-right">
-                <img class="website-img" src="assets/icone6.png" alt="Website Development">
-                <p>.</p>
-                <img class="app-img" src="assets/icone2.png" alt="Application Development">
-                <p>.</p>
-                <img class="hosting-img" src="assets/icone3.png" alt="Website Hosting">
-                <p>.</p>
-                <img class="game-img" src="assets/icone5.png" alt="Video game Development">
-            </div>
-            <div class="side-left">
-                <h1>A propos de moi</h1>
-                <p>Paragraphe de présentation</p>
-                <h2>50 +</h2>
-                <h2>2 +</h2>
-            </div>
-        </section>
-        <section id="Projects">
-            <h1>Mes projets</h1>
-            <div class="box"></div>
-            <p>.</p>
-        </section>
-        <section id="Contacts">
-            <div class="box"></div>
-            <h2>Contacts</h2>
-            <h1>Intéréssé par mon profil et vous avez un Projet ?<br>Contactez-moi</h1>
-            <form>
-                <label for="Nom">Nom</label>
-                <input type="text", id="last-name", name="last-name", placeholder="Entrez votre Nom", required>
-                <label for="Prénom">Prénom</label>
-                <input type="text", id="first-name", name="first-name", placeholder="Entrez votre Prénom", required>
-                <label for="email">Email</label>
-                <input type="email", id="email", name="email", placeholder="Entrez votre Addresse Mail", required>
-                <label for="text">Message</label>
-                <input type="message", id="message", name="message", placeholder="Présenter votre Projet", required>
-                <input type="submit", value="Soumettre">
-            </form>
-        </section>
+            </section>
+            <section id="Project">
+                <h1>Mes projets</h1>
+            </section>
+            <section id="Contact">
+                <div class="box"></div>
+                <h2>Contacts</h2>
+                <h1>Intéréssé par mon profil et vous avez un Projet ?<br>Contactez-moi</h1>
+                <form>
+                    <label for="last-name">Nom</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Entrez votre Nom" required>
+                    <label for="first-name">Prénom</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Entrez votre Prénom" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre Adresse Mail" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Présentez votre Projet" required></textarea>
+                    <input type="submit" value="Soumettre">
+                  </form>
+            </section>
+        </main>
+        <script src="script.js"></script>
         <footer>
             <div id="footer">
                 <h1>Nicolas Somnier</h1>
