@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "SUSE Mono", sans-serif;
     font-style: italic;
@@ -11,6 +15,7 @@ body {
 
 section{
     height: 79vh;
+    scroll-margin-top: 15vh;
 }
 
 main {
