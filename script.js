@@ -6,6 +6,17 @@ const closeIcon = document.querySelector("#close-icon-id");
 const downloadIcon = document.querySelector("#download-icon-id");
 const container = document.querySelector("#container");
 const totalCircles = 100;
+const projects = document.querySelectorAll('.container-project');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+projects.forEach(proj => observer.observe(proj));
 
 for (let i = 0; i < totalCircles; i++) {
     const circleContainer = document.createElement("div");
