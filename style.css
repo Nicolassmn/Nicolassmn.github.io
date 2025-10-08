@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    max-width: 100vw;
+    width: 100vw;
     font-family: "SUSE Mono", sans-serif;
     font-style: italic;
     font-optical-sizing: auto;
@@ -35,7 +35,7 @@ main {
 }
 
 footer {
-    max-width: 100vw;
+    width: 100vw;
     background-color: rgba(0, 0, 0, 0.2);
     border-top:2px solid rgba(75, 0, 130, 0.6);
     box-shadow:
@@ -46,7 +46,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5%;
+    padding: 2em 2em 1em 2em;
     gap: 5em;
     font-size: 1vw;
 }
@@ -420,7 +420,7 @@ nav a:hover::after{
     position: absolute;
     top: 0;
     left: -5px;
-    width: 5px;
+    width: 0.5%;
     height: 100%;
     background-color: rgba(75, 0, 130, 1);
     box-shadow: 
@@ -541,7 +541,7 @@ nav a:hover::after{
 }
 
 .header-project {
-    padding-bottom: 14em;
+    padding-bottom: 10%;
 }
 
 #Project h1 {
@@ -637,8 +637,8 @@ nav a:hover::after{
 
 .container-language {
     display: flex;
-    justify-content: space-evenly;
-    gap: 2em;
+    justify-content: center;
+    gap: 5%;
 }
 
 .container-language span {
@@ -647,8 +647,9 @@ nav a:hover::after{
     padding: 0.3em 1.2em;
     background-color: rgba(75, 0, 130, 0.6);
     font-weight: 600;
-    border-radius: 20px / 50%;
+    border-radius: clamp(10px, 14%, 20px) / 50%;
     text-align: center;
+    white-space: nowrap;
 }
 
 .container-redirection {
@@ -683,7 +684,7 @@ nav a:hover::after{
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
-  
+
   .container-project.visible {
     opacity: 1;
     transform: translateY(0);
@@ -698,7 +699,7 @@ nav a:hover::after{
 #Contact h1 {
     font-weight: 700;
     margin: 10px 0;
-    font-size: clamp(30px, 2.8vw, 60px);
+    font-size: 2.8vw;
     padding-right: 60%;
     display: flex;
     justify-content: flex-end;
@@ -792,7 +793,7 @@ form {
     width: 100%;
     padding: 1em;
     border: none;
-    border-radius: 40px / 50%;
+    border-radius: 7% / 50%;
     background-color: rgba(255,255,255,0.1);
     font-size: 1vw;
     color: whitesmoke;
@@ -897,7 +898,7 @@ input:focus-visible, textarea:focus-visible {
     padding: 0.8em 2em;
     cursor: pointer;
     font-size: 1.2vw;
-    border-radius: 30px / 50%;
+    border-radius: 20% / 50%;
     background-color: rgba(20,50,120,0.3);
     color: whitesmoke;
     border: none;
@@ -961,7 +962,7 @@ input:focus-visible, textarea:focus-visible {
     color: whitesmoke;
     font-size: 1em;
     padding: 0.2em 0.5em;
-    border-radius: 20px / 50%;
+    border-radius: 20% / 50%;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -976,6 +977,8 @@ input:focus-visible, textarea:focus-visible {
 .img-wrapper img {
     position: relative;
     transition: all 0.3s ease;
+    width: 4vw;
+    height: auto;
 }
 
 .link-container img:hover {
@@ -996,8 +999,8 @@ input:focus-visible, textarea:focus-visible {
 
 .mail-icon {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 4.2em;
+    height: 4.2em;
 }
 
 .mail-icon a,
@@ -1011,7 +1014,7 @@ input:focus-visible, textarea:focus-visible {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 6rem;
+    font-size: 4.2vw;
     opacity: 0;
     transform: scale(0);
     transition: all 0.3s ease;
@@ -1055,6 +1058,9 @@ input:focus-visible, textarea:focus-visible {
 
 /* ---------------------------media------------------------------------------*/
 @media (min-width: 2560px) {
+    #Home {
+        height: auto;
+    }
     .header {
         height: calc(80px *1.75);
     }
@@ -1098,6 +1104,19 @@ input:focus-visible, textarea:focus-visible {
     .banner-content span {
         font-size: calc(2vw * 1.15);
     }
+    #About-Me {
+        height: auto;
+    }
+    #About-Me {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    #About-Me .side-right {
+        height: auto;
+    }
+    .img-container::after {
+        bottom: -15%;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -1122,6 +1141,62 @@ input:focus-visible, textarea:focus-visible {
     #Home .side-right::before {
         width: 90%;
         height: 90%;
+    }
+    #About-Me {
+        flex-direction: column-reverse;
+        gap: 5%;
+        height: auto;
+    }
+    #About-Me .side-right {
+        height: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .container-about {
+        border-radius: 25% / 50%;
+    }
+    .container-about h1 {
+        font-size: 4.2vw;
+    }
+    .container-about h2 {
+        font-size: 2.5vw;
+    }
+    .container-about p {
+        font-size: 1.5vw;
+    }
+    .stat-item, .stat-item i {
+        font-size: 1.5vw;
+    }
+    #About-Me .side-left {
+        flex-direction: row;
+        gap: 5%;
+        padding-left: 5%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .img-container {
+        gap: 5%;
+        padding-left: 0;
+    }
+    .img-container::before {
+        top: 110%;
+        left: 0;
+        width: 75%;
+        height: 5px;
+    }
+    .img-container::after {
+        left: -15%;
+        top: 102%;
+        width: 0.8em;
+        height: 0.8em;
+    }
+    .img-container p {
+        font-size: 1.2vw;
+        flex-wrap: wrap;
+        white-space: wrap;
+    }
+    .img-container img {
+        width: 5vw;
     }
 }
 
@@ -1148,8 +1223,14 @@ input:focus-visible, textarea:focus-visible {
 }
 
 @media (max-width: 768px) {
+    footer {
+        display: none;
+    }
     .menu {
         display: block;
+    }
+    #Home {
+        height: auto;
     }
 
     #menu-icon-id{
@@ -1166,7 +1247,6 @@ input:focus-visible, textarea:focus-visible {
         transform: scale(1.1);
         text-shadow: 0 0 8px rgba(20,50,150,0.3);
     }
-
     .nav-menu {
         flex-direction: column;
         position: fixed;
@@ -1248,16 +1328,45 @@ input:focus-visible, textarea:focus-visible {
         width: 100%;
     }
     .banner {
-        height: 10%;
+        height: 6vh;
+    }
+    .img-container::after {
+        width: 0.5em;
+        height: 0.5em;
+        top: 105%;
+    }
+    #Contact {
+        height: auto;
+    }
+    .container-contact {
+        flex-direction: column;
+    }
+    .container-decoration {
+        margin-bottom: 5%;
+        font-size: 1.5vw;
+    }
+    #Contact h1 {
+        font-size: 4vw;
+    }
+    form {
+        font-size: 1.8vw;
+    }
+    .input-container input,
+    .input-container textarea {
+        font-size: 1.3vw;
+    }
+    #submit-btn {
+        font-size: 1.8vw;
     }
 }
 
 @media (max-width: 600px) {
-
 }
 
 @media (max-width: 480px) {
-
+    .img-container::after {
+        left: -25%;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1280,4 +1389,5 @@ input:focus-visible, textarea:focus-visible {
         height: 70%;
         width: 70%;
     }
+
 }
