@@ -209,109 +209,137 @@
             <section id="Contact">
                 <h1>Contacts</h1>
                 <div class="container-contact">
-                    <div class="container-decoration">
-                        <h2>Une idée ? Un <strong> projet </strong>qui vous trotte dans la tête ?</h2>
-                        <h2>Transformons vos inspirations en réalité !</h2>
+                  <div class="container-decoration">
+                    <h2>Une idée ? Un <strong> projet </strong>qui vous trotte dans la tête ?</h2>
+                    <h2>Transformons vos inspirations en réalité !</h2>
+                  </div>
+                  <form id="contact-form">
+                    <div class="input-container">
+                      <input type="text" id="last-name" name="last-name" placeholder="" required>
+                      <label for="last-name">Nom</label>
                     </div>
-                    <form>
-                        <div class="input-container">
-                            <input type="text" id="last-name" name="last-name" placeholder="" required>
-                            <label for="last-name">Nom</label>
-                        </div>
-                        <div class="input-container">
-                            <input type="text" id="first-name" name="first-name" placeholder="" required>
-                            <label for="first-name">Prénom</label>
-                        </div>
-                        <div class="input-container">
-                            <input type="email" id="email" name="email" placeholder="" required>
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="input-container">
-                            <textarea id="message" name="message"  placeholder="" required maxlength="300"></textarea>
-                            <label for="message">Message</label>
-                            <div class="char-counter"><span id="char-count">0</span>/300</div>
-                            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-                        </div>
-                        <button type="submit" id="submit-btn">
-                            <span class="btn-text">Envoyez !</span>
-                            <i class="bxr bx-loader-dots bx-flip-horizontal bx-spin bx-rotate-90" id="spin"></i>
-                            <div id="form-msg"></div>
-                          </button>
-                        </form>
-                        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-                        <script>
-                            emailjs.init("IAp5ByHnV_zVd0w2j");
-                        
-                          const form = document.getElementById("contact-form");
-                          const submitBtn = document.getElementById("submit-btn");
-                          const spinIcon = document.getElementById("spin");
-                          const btnText = document.getElementById("btn-text");
-                          const formMsg = document.getElementById("form-msg");
-                          const textarea = document.getElementById("message");
-                          const charCount = document.getElementById("char-count");
-                        
-                          // compteur de caractères
-                          textarea.addEventListener("input", () => {
-                            textarea.style.height = "auto";
-                            textarea.style.height = textarea.scrollHeight + "px";
-                            charCount.textContent = textarea.value.length;
-                          });
-                      
-                          form.addEventListener("submit", function(e) {
-                            e.preventDefault();
-                        
-                            // cacher le formulaire et afficher le loader
-                            Array.from(form.children).forEach(el => {
-                              if (el.id !== "form-msg") el.style.display = "none";
-                            });
-                            spinIcon.style.display = "inline-block";
-                            btnText.style.display = "none";
-                            formMsg.textContent = "";
-                        
-                            // minimum 2 secondes de loader
-                            const start = Date.now();
-                            emailjs.sendForm("IAp5ByHnV_zVd0w2j", "template_ce7a87t", this)
-                              .then(() => {
-                                const elapsed = Date.now() - start;
-                                const delay = Math.max(0, 2000 - elapsed);
-                                setTimeout(() => {
-                                  spinIcon.style.display = "none";
-                                  formMsg.textContent = "Message envoyé !";
-                                  formMsg.className = "success";
-                                  form.reset();
-                                  charCount.textContent = "0";
-                                }, delay);
-                              })
-                              .catch(err => {
-                                const elapsed = Date.now() - start;
-                                const delay = Math.max(0, 2000 - elapsed);
-                                setTimeout(() => {
-                                  spinIcon.style.display = "none";
-                                  formMsg.textContent = "Erreur, veuillez réessayer.";
-                                  formMsg.className = "error";
-                                
-                                  // réafficher le formulaire
-                                  Array.from(form.children).forEach(el => {
-                                    if (el.id !== "form-msg") el.style.display = "block";
-                                  });
-                                  btnText.style.display = "inline";
-                                }, delay);
-                                console.error(err);
-                              });
-                          });
-                        </script>
+                    <div class="input-container">
+                      <input type="text" id="first-name" name="first-name" placeholder="" required>
+                      <label for="first-name">Prénom</label>
+                    </div>
+                    <div class="input-container">
+                      <input type="email" id="email" name="email" placeholder="" required>
+                      <label for="email">Email</label>
+                    </div>
+                    <div class="input-container">
+                      <textarea id="message" name="message" placeholder="" required maxlength="300"></textarea>
+                      <label for="message">Message</label>
+                      <div class="char-counter"><span id="char-count">0</span>/300</div>
+                    </div>
+                    <input type="hidden" name="time" value="">
+                    <button type="submit" id="submit-btn">
+                      <span id="btn-text">Envoyez !</span>
+                      <i class="bx bx-loader-alt bx-spin" id="spin" style="display:none;"></i>
+                    </button>
+                    <div id="form-msg"></div>
+                  </form>
                 </div>
-            </section>
+                <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script>
+                    emailjs.init("IAp5ByHnV_zVd0w2j");
+                    const form = document.getElementById("contact-form");
+                    const submitBtn = document.getElementById("submit-btn");
+                    const spinIcon = document.getElementById("spin");
+                    const btnText = document.getElementById("btn-text");
+                    const formMsg = document.getElementById("form-msg");
+                    const textarea = document.getElementById("message");
+                    const charCount = document.getElementById("char-count");
+
+                    textarea.addEventListener("input", () => {
+                        textarea.style.height = "auto";
+                        textarea.style.height = textarea.scrollHeight + "px";
+                        charCount.textContent = textarea.value.length;
+                    });
+                    form.addEventListener("submit", function(e) {
+                        e.preventDefault();
+                        form.querySelector('input[name="time"]').value = new Date().toLocaleString();
+                        Array.from(form.children).forEach(el => {
+                          if (el.id !== "form-msg" && el.id !== "submit-btn") el.style.display = "none";
+                        });
+                        spinIcon.style.display = "inline-block";
+                        btnText.style.display = "none";
+                        formMsg.textContent = "";
+                        const start = Date.now();
+                        emailjs.sendForm("service_o6arc8b", "template_ce7a87t", this)
+                        .then(() => {
+                            const elapsed = Date.now() - start;
+                            const delay = Math.max(0, 2000 - elapsed);
+                            setTimeout(() => {
+                                spinIcon.style.display = "none";
+                                formMsg.textContent = "✅ Message envoyé avec succès !";
+                                formMsg.className = "success";
+                                form.querySelectorAll('input, textarea, button').forEach(el => el.style.display = "none");
+                                formMsg.style.textAlign = "center";
+                            }, delay);
+                        })
+                        .catch(err => {
+                            const elapsed = Date.now() - start;
+                            const delay = Math.max(0, 2000 - elapsed);
+                            setTimeout(() => {
+                                spinIcon.style.display = "none";
+                                formMsg.textContent = "❌ Une erreur est survenue, veuillez réessayer.";
+                                formMsg.className = "error";
+                                Array.from(form.children).forEach(el => {
+                                if (el.id !== "form-msg") el.style.display = "block";
+                                });
+                                btnText.style.display = "inline";
+                            }, delay);
+                            console.error(err);
+                        });
+                    });
+                </script>
+              </section>
         </main>
         <script src="script.js"></script>
-        <footer>
-            <div id="footer">
+        <footer id="footer">
+            <div class="footer-script">
                 <h1>Nicolas Somnier</h1>
                 <h2>Site web designé par Nicolas Somnier</h2>
-                <img src="assets/email.png" alt="Email">
-                <img src="assets/github.png" alt="Github">
-                <img src="assets/linkedin.png" alt="Linkedin">
+                <h3>&copy; 2025 - Tous droits réservés</h3>
             </div>
+            <div class="link-container">
+                <div class="mail-icon" id="mail-container" data-tooltip="Email">
+                    <i class='bxr bx-envelope' id="mail-1"></i>
+                    <i class='bxr bx-envelope-open' id="mail-2"></i>
+                    <i class='bxr bx-mail-open' id="mail-3"></i>
+                </div>
+                <div class="img-wrapper" data-tooltip="Github">
+                    <a href="https://github.com/Nicolassmn"><img src="assets/github.png" alt="Github" id="github"></a>
+                </div>
+                <div class="img-wrapper" data-tooltip="Linkedin">
+                    <a href="https://www.linkedin.com/in/nicolas-somnier-1275a52a3/"><img src="assets/linkedin.png" alt="Linkedin" id="linkedin"></a>
+                </div>
+            </div>
+            <script>
+            const mailContainer = document.getElementById("mail-container");
+            const mail3 = document.getElementById("mail-3");
+            mailContainer.addEventListener("mouseenter", () => {
+                mailContainer.classList.add("hovered");
+            });
+            mailContainer.addEventListener("mouseleave", () => {
+                mailContainer.classList.remove("hovered");
+            });
+            mailContainer.addEventListener("click", () => {
+                mail3.classList.add("active");
+                setTimeout(() => {
+                    mail3.classList.remove("active");
+                }, 2000);
+            });
+            mailContainer.addEventListener("click", (e) => {
+                e.preventDefault();
+                navigator.clipboard.writeText("nicolas.somnier@epitech.eu").then(() => {
+                    mailContainer.dataset.tooltip = "copiée !";
+                    setTimeout(() => {
+                        mailContainer.dataset.tooltip = "Email";
+                    }, 2000);
+                });
+            });
+            </script>
         </footer>
     </body>
 </html>
