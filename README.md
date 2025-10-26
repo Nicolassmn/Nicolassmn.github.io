@@ -1,44 +1,62 @@
-# Nicolassmn.github.io
+<h1 align="center">🎨 Portfolio — Nicolassmn</h1>
 
-# Portfolio - Nicolas Somnier
+<p align="center">
+  <a href="https://Nicolassmn.github.io" target="_blank">🌐 Visit Website</a>
+</p>
 
-## Description du projet
+<p align="center">
+  <img src="https://img.shields.io/badge/Portfolio-GitHub-blue?logo=github" alt="GitHub Portfolio" />
+  <img src="https://img.shields.io/badge/Language-HTML%2FCSS%2FJS-yellow" alt="Languages" />
+  <img src="https://img.shields.io/badge/Status-Active-green" alt="Status" />
+</p>
 
-Ce projet est mon portfolio personnel, conçu pour présenter mes compétences en développement, mes projets réalisés et mon CV.
+---
 
-## Statut du projet
+### 🖥️ About
 
-Le développement du portfolio est terminé, mais il peut être mis à jour régulièrement pour ajouter de nouveaux projets ou améliorer le design.
+**Nicolassmn.github.io** is the personal portfolio of **Nicolassmn**, showcasing programming projects, C/C++ games, algorithms, and other software works.
+It is built using **HTML, CSS, and JavaScript**, with a clean and modern design, highlighting projects with demos and detailed descriptions.
 
-## Exigences
+---
 
-Pour développer ou tester le projet localement, il est nécessaire d’avoir :
+### 🚀 Features
 
-- Un navigateur moderne (Chrome, Firefox, Edge…)
-- Un serveur local si vous souhaitez servir les fichiers PDF ou tester certaines fonctionnalités JS (optionnel pour HTML/CSS/JS simples)
+* Modern responsive design
+* Showcases programming projects (C, algorithms, games, shells…)
+* GIFs or screenshots for project demos
+* Detailed project descriptions with links to GitHub repositories
+* Interactive navigation with smooth scrolling
+* Contact section with social links
 
-## Installation et utilisation
+---
 
-1. Cloner le dépôt :
+### 🌐 Visit
 
-        git clone https://github.com/ton-utilisateur/portfolio.git
+You can explore the portfolio here:
+[https://Nicolassmn.github.io](https://Nicolassmn.github.io)
 
-2. Ouvrir le fichier index.html dans un navigateur pour visualiser le site.
+---
 
-## Technologies utilisées :
+### 📚 Usage / Contribution
 
-- HTML5 – Structure des pages
-- CSS3 – Design, animations et responsive design
-- JavaScript (Vanilla JS) – Interactions, menu hamburger, overlay du CV
+* **Clone the portfolio locally**:
 
-## Bugs connus
+```bash
+git clone https://github.com/Nicolassmn/Nicolassmn.github.io.git
+```
 
-Sur certains navigateurs mobiles, l’overlay du PDF peut nécessiter un rafraîchissement pour afficher correctement le document.
+* **Open `index.html`** in your browser to preview
+* Modify/add new projects in the HTML and update assets as needed
 
-Les animations peuvent légèrement varier selon les performances du navigateur.
+---
 
+### 📌 Contact
 
-## Droits d’auteur et licence
+* GitHub: [Nicolassmn](https://github.com/Nicolassmn)
+* Portfolio: [https://Nicolassmn.github.io](https://Nicolassmn.github.io)
 
-_Nicolas Somnier_ – Tous droits réservés.
-Licence : MIT.
+---
+
+### 📝 License
+
+This portfolio is licensed under the **MIT License**.
